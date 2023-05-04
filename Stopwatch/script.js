@@ -43,46 +43,46 @@
 //     timerRef.innerHTML = ` ${h} : ${m} : ${s} : ${ms}`;
 // }
 
-const timerRef=document.querySelector(".timerDisplay")
+// const timerRef=document.querySelector(".timerDisplay")
 
-let [milisec, sec, min, hr] = [0, 0, 0, 0];
-let init=0
-document.getElementById("startTimer").addEventListener("click",()=>{
-    // if(init!==null){
-    //     clearInterval(init)
-    // }
-   init= setInterval(StopWatch,10);
-})
-document.getElementById("pauseTimer").addEventListener("click",()=>{
-    clearInterval(init);
-})
-document.getElementById("resetTimer").addEventListener("click",()=>{
-     clearInterval(init);
-      [milisec, sec, min, hr] = [0, 0, 0, 0];
-    timerRef.innerHTML = '00 : 00 : 00 : 000 ';
-})
+// let [milisec, sec, min, hr] = [0, 0, 0, 0];
+// let init=0
+// document.getElementById("startTimer").addEventListener("click",()=>{
+//     // if(init!==null){
+//     //     clearInterval(init)
+//     // }
+//    init= setInterval(StopWatch,10);
+// })
+// document.getElementById("pauseTimer").addEventListener("click",()=>{
+//     clearInterval(init);
+// })
+// document.getElementById("resetTimer").addEventListener("click",()=>{
+//      clearInterval(init);
+//       [milisec, sec, min, hr] = [0, 0, 0, 0];
+//     timerRef.innerHTML = '00 : 00 : 00 : 000 ';
+// })
 
-function StopWatch(){
-   milisec+=10;
-   if(milisec==1000){
-    milisec=0;
-    sec++;
-   if(sec==60){
-    sec=0;
-    min++;
-   if(min==60){
-    min=0;
-    hr++;
-      }
-    }
-   }
+// function StopWatch(){
+//    milisec+=10;
+//    if(milisec==1000){
+//     milisec=0;
+//     sec++;
+//    if(sec==60){
+//     sec=0;
+//     min++;
+//    if(min==60){
+//     min=0;
+//     hr++;
+//       }
+//     }
+//    }
 
-let h=hr<10?"0"+ hr:hr
-let m=min<10?"0"+ min:min
-let s=sec<10?"0"+ sec:sec
-let ms=milisec < 10 ? "00" + milisec : milisec < 100 ? "0" + milisec : milisec;
-timerRef.innerHTML = ` ${h} : ${m} : ${s} : ${ms}`
-}
+// let h=hr<10?"0"+ hr:hr
+// let m=min<10?"0"+ min:min
+// let s=sec<10?"0"+ sec:sec
+// let ms=milisec < 10 ? "00" + milisec : milisec < 100 ? "0" + milisec : milisec;
+// timerRef.innerHTML = ` ${h} : ${m} : ${s} : ${ms}`
+// }
 
     // const timerRef = document.querySelector(".timerDisplay");
   
